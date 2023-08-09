@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Number Generator</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+    #generateButton {
+      margin-top: 20px;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    #result {
+      font-size: 24px;
+      font-weight: bold;
+      padding: 10px;
+      border: 2px solid #333;
+      display: inline-block;
+      margin-top: 20px;
+      background-color: #f0f0f0;
+    }
+  </style>
+</head>
+<body>
+  <h1>Bloxflip predictors arent real</h1>
+  <p>your lucky this isn't a virus and im just teaching you a lesson</p>
+  <p id="result">.</p>
+  <button id="generateButton">Generate</button>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var generateButton = document.getElementById('generateButton');
+      var resultElement = document.getElementById('result');
+
+      generateButton.addEventListener('click', function() {
+        var randomNumber = Math.floor(Math.random() * 3) + 1;
+        resultElement.textContent = 'Generated number: ' + randomNumber;
+      });
+    });
+  </script>
+</body>
+</html>
